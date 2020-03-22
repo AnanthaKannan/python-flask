@@ -1,13 +1,12 @@
-
-GET http://localhost:8888/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoia2FubmFuIiwiaWF0IjoxNTc0MzUzODY1LCJleHAiOjE1NzQzNTM4OTV9.XSpuIb75GKl7dkwk5J5bJlXn5nH_qrWclM1cceM6Bn4
+@url = http://127.0.0.1:5000
+###
+GET {{url}}/name/kannan
+Content-Type: application/json
 
 ###
+POST {{url}}/name/kannan
+Content-Type: application/json
 
-POST  http://localhost:8888/login
-Content-type: application/json
-
-{
-    "username":"kannan"
-}
 ###
+DELETE {{url}}/name/kannan
+Content-Type: application/json
