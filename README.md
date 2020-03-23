@@ -2,9 +2,10 @@
 
 ## Ubuntu
 ### Create Viritual env
-    python3 -m venv env
+    python3.6 -m venv env
 ### To activate venu
     source bin/activate
+    source env/bin/activate
 ### You can confirm you’re in the virtual environment
     which python .../env/bin/python
 ### Leaving the virtual environment
