@@ -1,18 +1,16 @@
 from flask import Flask
-from flask_restful import Resource, Api
-
 app = Flask(__name__)
-api = Api(app)
 
-class HelloWorld(Resource):
-    def __init__(self):
-        pass
-    def get(self):
-        return {
-            'status':'Hello worlds here va'
-        }
+@app.route('/success/<name>')
+def success(name):
+    return 'welcome %s' % name
 
-api.add_resource(HelloWorld, '/')
+@app.route('/login',methods = ['POST'])
+def login():
+    print(request.form)
+    # user = request.form['nm']
+    return 'hello'
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
+if __name__ == '__main__':
+    app.run(debug = True)

@@ -14,6 +14,11 @@
     pip freeze > requirements.txt
 ### Installing packages
     pip install requests
+### set the file
+    export FLASK_APP=app.py
+### run the file
+    flask run
+
 
 ## Windows
 ### Check pip version
@@ -24,6 +29,10 @@
     .\env\Scripts\activate
 ### You can confirm you’re in the virtual environment
    where python .../env/bin/python.exe
+### set the file
+    set FLASK_APP=app.py
+### run the file
+    flask run
 ### Leaving the virtual environment
     deactivate
 
