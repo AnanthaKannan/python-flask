@@ -2,3 +2,7 @@
 ###
 GET {{url}}
 Content-Type: application/json
+
+###
+GET {{url}}/store
+Content-Type: application/json
