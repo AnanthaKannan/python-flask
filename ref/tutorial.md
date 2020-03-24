@@ -1,1 +1,4 @@
-deictionary == JSON
+### Variables
+```py
+    x = 15
+```
