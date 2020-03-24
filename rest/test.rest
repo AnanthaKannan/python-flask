@@ -3,6 +3,28 @@
 GET {{url}}
 Content-Type: application/json
 
-###
+### get all sores
 GET {{url}}/store
+Content-Type: application/json
+
+### create new stores
+POST {{url}}/store
+Content-Type: application/json
+
+{
+    "name":"added new store",
+    "items":[]
+}
+
+### add item in store
+POST {{url}}/store/added new store/item
+Content-Type: application/json
+
+{
+    "name":"my secound name",
+    "price":32.2
+}
+
+### get stores item by name
+GET {{url}}/store/My wonderful store/item
 Content-Type: application/json
