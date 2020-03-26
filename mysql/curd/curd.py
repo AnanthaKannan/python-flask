@@ -1,20 +1,14 @@
+import sys, os
+sys.path.append(os.path.abspath('./config'))
 
-# from .. import config
-# print(sys.path)
-import sys
-# from ...config.config import sql_passwd
-from ...mysql.config.config import sql_database
-# import sys
-# print(sys.path)
+import config
+import mysql.connector
+from flask_restful import Resource
 
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    passwd="kannan$7500",
+    database="mydatabase"
+    )
 
-
-# import mysql.connector
-# class CURD(Resource):
-#     def __init__(self):
-#         self.db = mysql.connector.connect(
-#   host="localhost",
-#   user="root",
-#   passwd="kannan$7500",
-#   database="mydatabase"
-# )
