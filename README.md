@@ -3,6 +3,7 @@
 ## Ubuntu
 ### Create Viritual env
     python3.6 -m venv env
+    virtualenv env --python=python3.6
 ### To activate venu
     source bin/activate
     source env/bin/activate
@@ -40,3 +41,12 @@
 
 
 ### How to deploy in heroky
+
+
+### Error status
+ 404 not found
+ 401 Unauthorized Authentication failure
+ 403 Forbidden: Authorization failure or invalid Application ID.
+ 200 ok
+ 201 created
+ 204 no content
