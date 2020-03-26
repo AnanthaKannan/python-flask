@@ -1,4 +1,23 @@
-@url = http://127.0.0.1:5000
-###
-GET {{url}}/admin/store
+@url = http://127.0.0.1:5000/admin
+
+### get all admin
+GET {{url}}/getAllAdmin
+Content-Type: application/json
+
+### get admin details using name
+GET {{url}}/adminByName/kannan
+Content-Type: application/json
+
+### add new admin
+POST {{url}}/addAdmin
+Content-Type: application/json
+
+{
+    "name": "admin4",
+    "address": "mumbai",
+    "age": 25
+}
+
+### delete admin by name
+DELETE {{url}}/adminByName/admin4
 Content-Type: application/json

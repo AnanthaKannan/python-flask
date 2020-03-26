@@ -21,17 +21,21 @@ if db.is_connected():
     print("You're connected to database: ", record)
 
 # to execute insert query
-def insert(qry, val):
+def modifi(qry, val=None):
     try:
         cursor = db.cursor()
-        cursor.execute(qry)
+        if val == None:
+            cursor.execute(qry)
+        else:
+            cursor.execute(qry, val)
         db.commit()
         count = cursor.rowcount
         print(count)
-        cursor.close()
+        return count
     except Error as e:
         print("Error while connecting to MySQL", e)
         db.rollback()
+        return 0
     finally:
         if(db.is_connected()):
             cursor.close()
@@ -50,9 +54,10 @@ def read(qry, val=None):
         count = cursor.rowcount
         print(count)
         if count > 0:
-            print(result)
+            return result
         else:
             print([])
+            return []
         # for x in result:
         #     print(x[0])
 
