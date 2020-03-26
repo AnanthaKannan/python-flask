@@ -1,6 +1,8 @@
 ### Variables
 ```py
     x = 15
+
+    tuple = ("apple", "banana", "cherry")
 ```
 
 ### Import 

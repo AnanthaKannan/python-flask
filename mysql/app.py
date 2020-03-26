@@ -1,9 +1,16 @@
+from flask import Flask
 
-import curd.curd as CURD
-import query.qry as qry
+from route.admin import admin_route
 
-# result = CURD.insert(qry.insert_customers_data, None)
+app = Flask(__name__)
+app.register_blueprint(admin_route, url_prefix='/admin')
 
-CURD.read(qry.select_all_customers)
+if __name__ == "__main__":
+    app.run(port=5000, debug=True)
+
+# import curd.curd as CURD
+# import query.qry as qry
+
+# CURD.read(qry.select_all_customers)
 # name = ('kannan',)
 # CURD.read(qry.select_customer_by_name, name)
