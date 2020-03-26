@@ -28,6 +28,7 @@ def modifi(qry, val=None):
             cursor.execute(qry)
         else:
             cursor.execute(qry, val)
+        row_headers=[x[0] for x in cur.description]
         db.commit()
         count = cursor.rowcount
         print(count)
@@ -50,11 +51,15 @@ def read(qry, val=None):
             cursor.execute(qry)
         else:
             cursor.execute(qry, val)
-        result = cursor.fetchall()
+        rv = cursor.fetchall()
         count = cursor.rowcount
         print(count)
         if count > 0:
-            return result
+            json_data=[]
+            row_headers=[x[0] for x in cursor.description]
+            for result in rv:
+                json_data.append(dict(zip(row_headers,result)))
+            return json_data
         else:
             print([])
             return []
