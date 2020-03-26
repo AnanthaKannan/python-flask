@@ -1,5 +1,7 @@
 from flask import Flask
+import curd.curd
 
+# route
 from route.admin import admin_route
 
 app = Flask(__name__)

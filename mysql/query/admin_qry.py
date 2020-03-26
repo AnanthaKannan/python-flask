@@ -1,0 +1,1 @@
+get_all_admin = "select * from admin"

@@ -22,3 +22,7 @@
     from curd.curd import myval
     import curd.curd as curd
 ```
+
+### import and export mysql
+    mysqldump -u username –-password=your_password database_name > file.sql
+    mysql -u username –-password=your_password database_name < file.sql 
