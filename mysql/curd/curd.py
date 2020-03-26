@@ -19,14 +19,22 @@ def insert(qry, val):
     print(count)
     cursor.close()
 
-def read(qry, val):
+def read(qry, val=None):
     try:
         cursor = db.cursor()
-        cursor.execute(qry)
+        if val == None:
+            cursor.execute(qry)
+        else:
+            cursor.execute(qry, val)
         result = cursor.fetchall()
-        print(result)
-        for x in result:
-            print(x[0])
+        count = cursor.rowcount
+        print(count)
+        if count > 0:
+            print(result)
+        else:
+            print([])
+        # for x in result:
+        #     print(x[0])
 
     except Error as e:
         print("Error while connecting to MySQL", e)
