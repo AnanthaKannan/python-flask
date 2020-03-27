@@ -5,7 +5,7 @@ GET {{url}}/getAllAdmin
 Content-Type: application/json
 
 ### get admin details using name
-GET {{url}}/adminByName/admin2
+GET {{url}}/adminByName/admin10
 Content-Type: application/json
 
 ### add new admin

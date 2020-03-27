@@ -6,14 +6,13 @@ from database.models import Admin
 
 @admin_route.route('/getAllAdmin', methods=['GET'])
 def getAllAdmin():
-    admins = Admin.find_one()
+    admins = Admin.objects({})
     return jsonify(response(admins, 'GET')), 200
 
 @admin_route.route('/adminByName/<string:name>', methods=['GET'])
 def getAdminByName(name):
-    value = (name,)
-    data = curd.read(admin_qry.get_admin_by_name, value)
-    return jsonify(response(data, 'GET')), 200
+    admins = Admin.objects(name=name)
+    return jsonify(response(admins, 'GET')), 200
 
 @admin_route.route('/addAdmin', methods=['POST'])
 def addAdmin():
@@ -24,13 +23,12 @@ def addAdmin():
 
 @admin_route.route('/adminByName/<string:name>', methods=['DELETE'])
 def deleteAdminByName(name):
-    value = (name,)
-    count = curd.modifi(admin_qry.delete_admin_by_name, value)
-    return response(count, 'DELETE'), 200
+    admin = Admin.objects({})
+    return response( str(admin), 'DELETE'), 200
 
 @admin_route.route('/adminById/<int:id>', methods=['PUT'])
 def updateAdminById(id):
-    req = request.get_json()
+    req = request.get_json(_id=id).delete_one()
     value = (req['address'], id,)
     count = curd.modifi(admin_qry.update_admin_by_id, value)
     return response(count, 'PUT'), 200
