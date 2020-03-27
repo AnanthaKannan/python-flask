@@ -11,10 +11,3 @@ app.register_blueprint(errors)
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
-
-# import curd.curd as CURD
-# import query.qry as qry
-
-# CURD.read(qry.select_all_customers)
-# name = ('kannan',)
-# CURD.read(qry.select_customer_by_name, name)

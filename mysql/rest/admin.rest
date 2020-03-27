@@ -23,7 +23,7 @@ DELETE {{url}}/adminByName/admin5
 Content-Type: application/json
 
 ### update admin by id
-PUT {{url}}/adminById/sdfsdf
+PUT {{url}}/adminById/2
 Content-Type: application/json
 
 {

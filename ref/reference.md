@@ -6,3 +6,5 @@
 [Error exceptions](https://opensource.com/article/17/3/python-flask-exceptions)
 [Error Handler](https://flask-restplus.readthedocs.io/en/stable/errors.html)
 [React template](https://colorlib.com/wp/free-react-templates/)
+
+[Mongodb](https://dev.to/paurakhsharma/flask-rest-api-part-1-using-mongodb-with-flask-3g7d)

@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 
 errors = Blueprint('errors', __name__)
 
@@ -9,3 +9,11 @@ def handle_error(error):
         'status': 400
     }
     return jsonify(response),400
+
+@errors.app_errorhandler(404)
+def not_fount(error=None):
+    response = {
+        'status':404,
+        'message': 'Not found ' + request.url
+    }
+    return jsonify(response), 404
