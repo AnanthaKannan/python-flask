@@ -12,7 +12,6 @@ def getAllAdmin():
 
 @admin_route.route('/adminByName/<string:name>', methods=['GET'])
 def getAdminByName(name):
-    print(name)
     value = (name,)
     data = curd.read(admin_qry.get_admin_by_name, value)
     return jsonify(response(data, 'GET')), 200
@@ -36,3 +35,10 @@ def updateAdminById(id):
     value = (req['address'], id,)
     count = curd.modifi(admin_qry.update_admin_by_id, value)
     return response(count, 'PUT'), 200
+
+@admin_route.errorhandler(Exception)
+def handle_error(error):
+    return {
+        'error': error,
+        'status':500
+    },500
