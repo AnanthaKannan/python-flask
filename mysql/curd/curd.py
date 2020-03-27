@@ -28,7 +28,6 @@ def modifi(qry, val=None):
             cursor.execute(qry)
         else:
             cursor.execute(qry, val)
-        row_headers=[x[0] for x in cur.description]
         db.commit()
         count = cursor.rowcount
         print(count)

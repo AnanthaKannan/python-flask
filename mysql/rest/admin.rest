@@ -13,7 +13,7 @@ POST {{url}}/addAdmin
 Content-Type: application/json
 
 {
-    "name": "admin5",
+    "name": "admin7",
     "address": "madurai",
     "age": 43
 }
@@ -23,7 +23,7 @@ DELETE {{url}}/adminByName/admin5
 Content-Type: application/json
 
 ### update admin by id
-PUT {{url}}/adminById/11
+PUT {{url}}/adminById/sdfsdf
 Content-Type: application/json
 
 {

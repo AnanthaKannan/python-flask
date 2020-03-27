@@ -22,7 +22,7 @@ def addAdmin():
     values = (req_data['name'], req_data['address'], req_data['age'],)
     count = curd.modifi(admin_qry.add_new_admin, values)
     return response(count, 'POST'), 200
-    
+
 @admin_route.route('/adminByName/<string:name>', methods=['DELETE'])
 def deleteAdminByName(name):
     value = (name,)
@@ -36,9 +36,3 @@ def updateAdminById(id):
     count = curd.modifi(admin_qry.update_admin_by_id, value)
     return response(count, 'PUT'), 200
 
-@admin_route.errorhandler(Exception)
-def handle_error(error):
-    return {
-        'error': error,
-        'status':500
-    },500
