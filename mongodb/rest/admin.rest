@@ -1,0 +1,33 @@
+@url = http://127.0.0.1:5000/admin
+
+### get all admin
+GET {{url}}/getAllAdmin
+Content-Type: application/json
+
+### get admin details using name
+GET {{url}}/adminByName/admin2
+Content-Type: application/json
+
+### add new admin
+POST {{url}}/addAdmin
+Content-Type: application/json
+
+{
+    "name": "admin11",
+    "address": "chennai",
+    "age": 14
+}
+
+### delete admin by name
+DELETE {{url}}/adminByName/admin5
+Content-Type: application/json
+
+### update admin by id
+PUT {{url}}/adminById/2
+Content-Type: application/json
+
+{
+    "name": "admin4",
+    "address": "yahoo",
+    "age": 25
+}
