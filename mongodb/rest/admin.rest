@@ -19,7 +19,7 @@ Content-Type: application/json
 }
 
 ### delete admin by name
-DELETE {{url}}/adminByName/admin5
+DELETE {{url}}/adminByName/5e7e0a5a54147d57bb54a681
 Content-Type: application/json
 
 ### update admin by id
