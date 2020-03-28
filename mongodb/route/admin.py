@@ -21,15 +21,13 @@ def addAdmin():
     id = admin.id
     return response( str(id), 'POST'), 200
 
-@admin_route.route('/adminByName/<string:name>', methods=['DELETE'])
-def deleteAdminByName(name):
-    admin = Admin.objects({})
+@admin_route.route('/adminByid/<string:id>', methods=['DELETE'])
+def adminByid(id):
+    admin = Admin.objects(id=id).delete()
     return response( str(admin), 'DELETE'), 200
 
-@admin_route.route('/adminById/<int:id>', methods=['PUT'])
+@admin_route.route('/adminById/<string:id>', methods=['PUT'])
 def updateAdminById(id):
-    req = request.get_json(_id=id).delete_one()
-    value = (req['address'], id,)
-    count = curd.modifi(admin_qry.update_admin_by_id, value)
-    return response(count, 'PUT'), 200
-
+    body = request.get_json()
+    admin = Admin.objects(id=id).update(**body)
+    return response(str(admin), 'PUT')

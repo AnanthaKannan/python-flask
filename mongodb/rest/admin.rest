@@ -5,7 +5,7 @@ GET {{url}}/getAllAdmin
 Content-Type: application/json
 
 ### get admin details using name
-GET {{url}}/adminByName/admin10
+GET {{url}}/adminByName/admin11
 Content-Type: application/json
 
 ### add new admin
@@ -13,17 +13,17 @@ POST {{url}}/addAdmin
 Content-Type: application/json
 
 {
-    "name": "admin11",
-    "address": "chennai",
-    "age": 14
+    "name": "admin13",
+    "address": "madurai",
+    "age": 45
 }
 
-### delete admin by name
-DELETE {{url}}/adminByName/5e7e0a5a54147d57bb54a681
+### delete admin by id
+DELETE {{url}}/adminByid/5e7e0a5a54147d57bb54a681
 Content-Type: application/json
 
 ### update admin by id
-PUT {{url}}/adminById/2
+PUT {{url}}/adminById/5e7eec01259b6d839fcd34bf
 Content-Type: application/json
 
 {

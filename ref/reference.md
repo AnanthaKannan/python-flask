@@ -1,5 +1,6 @@
 [virtual env creation](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 [my sql](https://pynative.com/python-mysql-database-connection/)
+[mysql reft](https://www.roytuts.com/python-rest-api-crud-example-using-flask-and-mysql/)
 [JWT](https://blog.tecladocode.com/learn-python-advanced-configuration-of-flask-jwt/)
 [api-basic-git](https://github.com/schoolofcode-me/rest-api-sections/blob/master/section5/app.py)
 
@@ -9,3 +10,4 @@
 
 [Mongodb](https://dev.to/paurakhsharma/flask-rest-api-part-1-using-mongodb-with-flask-3g7d)
 [mogodb model - mongo engin](http://docs.mongoengine.org/guide/defining-documents.html)
+[Mongo query](http://docs.mongoengine.org/guide/querying.html)
